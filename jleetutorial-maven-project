@@ -1,0 +1,16 @@
+pipeline {
+agent any
+
+tools {
+    jdk 'Java'
+    maven'Maven'
+}
+stages{
+ stage('git clone') {
+      steps{
+          git branch: 'master',
+           url: 'https://github.com/jleetutorial/maven-project.git'
+        }
+     }
+    }
+}
